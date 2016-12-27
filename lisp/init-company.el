@@ -16,8 +16,7 @@
     (setq-default company-backends '((company-capf company-dabbrev-code) company-dabbrev)
                   company-dabbrev-other-buffers 'all))
   (global-set-key (kbd "M-C-/") 'company-complete)
-  (when (maybe-require-package 'company-quickhelp)
-    (add-hook 'after-init-hook 'company-quickhelp-mode))
+  (maybe-require-package 'company-quickhelp)
 
   (defun sanityinc/local-push-company-backend (backend)
     "Add BACKEND to a buffer-local version of `company-backends'."
@@ -43,7 +42,6 @@
     (add-hook 'company-completion-started-hook 'sanityinc/page-break-lines-disable)
     (add-hook 'company-completion-finished-hook 'sanityinc/page-break-lines-maybe-reenable)
     (add-hook 'company-completion-cancelled-hook 'sanityinc/page-break-lines-maybe-reenable)))
-
 
 
 (provide 'init-company)
