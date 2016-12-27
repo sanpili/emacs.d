@@ -51,7 +51,7 @@
 
 (require 'init-frame-hooks)
 (require 'init-xterm)
-(require 'init-themes)
+;(require 'init-themes)
 (require 'init-osx-keys)
 (require 'init-gui-frames)
 (require 'init-dired)
@@ -120,6 +120,7 @@
 (require 'init-dash)
 (require 'init-ledger)
 ;; Extra packages which don't require any configuration
+(require 'init-go)
 
 (require-package 'gnuplot)
 (require-package 'lua-mode)
