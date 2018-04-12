@@ -131,6 +131,7 @@
 (require 'init-ledger)
 ;; Extra packages which don't require any configuration
 (require 'init-go)
+(require 'init-protobuf)
 (require 'init-thrift)
 
 (require-package 'gnuplot)
